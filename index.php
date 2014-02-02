@@ -16,8 +16,10 @@
 				</ul>
 			</nav>
 		</header>
+		
 		<section>
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/hero.jpg" />
+			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<section>
 				<a href="<?php the_permalink(); ?>"><h1><?php the_title_attribute(); ?></h1></a>
@@ -25,10 +27,11 @@
 				<!-- <p>Pressed and Squeezed is a full-service WordPress shop. We create custom themes and CMSes for our clients.</p>
 				<p>We also make pancakes on the side.</p> -->
 			</section>
+		
+			<?php endwhile; else :?>
+				<p><?php _e('Sorry, no content'); ?></p>
+			<?php endif; ?>
 		</section>
-		<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no content'); ?></p>
-		<?php endif; ?>
 		<footer>
 			<h1>Contact Us</h1>
 			<p>Pressed and Squeezed</p>

@@ -14,5 +14,6 @@
 			<p><?php _e('Sorry, no content'); ?></p>
 		<?php endif; ?>
 	</section>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
